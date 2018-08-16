@@ -85,11 +85,13 @@ ul {
 .blok1 {
 	flex: 1;
 	margin: auto;
+	max-width: 449px;
 }
 
 .blok2 {
-	flex: 1 1 600;
+	flex: 1 1 600px;
 	margin-left: 60px;
+	max-width: 449px;
 }
 
 h1 {
@@ -125,14 +127,16 @@ footer {
 }
 @media screen and (max-width: 1000px) {
 	.blok2 {
+		margin-top: 42px;
 		margin-left: 0;
-		flex-flow: colum wrap;
+		
 	}
-	
+
 	
 }
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 600px) {
 	.contact__info{
 		width: 100%;
 	}
+
 }
