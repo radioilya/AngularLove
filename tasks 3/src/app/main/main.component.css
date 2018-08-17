@@ -1,0 +1,39 @@
+
+.index {
+  display:block;
+  height: 100%;
+  margin-bottom: 25px;
+}
+
+.content {
+  margin:0 auto;
+  width: calc(82% - 120px);
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 120px	0	120px 0;
+}
+
+.skin {
+  background-color: #f7f7f9;
+}
+
+.blok1 {
+  flex: 1;
+  margin: auto;
+  max-width: 449px;
+}
+
+.blok2 {
+  flex: 1 1 600px;
+  margin-left: 60px;
+  max-width: 449px;
+}
+
+h1 {
+  font-family: "Marck Script";
+  font-size: 30px;
+  text-decoration: none;
+  color: #1c1c1c;
+}
+

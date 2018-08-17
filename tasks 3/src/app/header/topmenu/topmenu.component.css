@@ -1,0 +1,23 @@
+
+.link__menu {
+  position: fixed;
+  bottom: 50px;
+  z-index:1;
+  transform: rotate(-90deg);
+
+}
+
+.li__menu {
+  list-style-type: none;
+}
+
+.link {
+  color: #1c1c1c;
+}
+
+ul {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  padding: 12px;
+}
