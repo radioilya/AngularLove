@@ -1,0 +1,14 @@
+<div class="link__menu">
+  <div class="link__fix">
+    <nav class="nav__link__menu">
+      <ul>
+        <li  class="li__menu" *ngFor="let links of arrMenu"><a class="link" href="{{links.link}}">{{links.name}}</a></li>
+      </ul>
+    </nav>
+  </div>
+</div>
+Имя
+<input [(ngModel)]="inputName">
+Ссылка
+<input [(ngModel)]="inputLink">
+<button (click)="add()">Добавить</button>
