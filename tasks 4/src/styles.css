@@ -1,0 +1,19 @@
+/* You can add global styles to this file, and also import other style files */
+body{
+  max-width:1920px;
+  min-width:320px;
+  margin:0 auto;
+
+}
+@media screen and (max-width: 1000px) {
+  .image__block {
+    margin-top: 42px;
+    margin-left: 0;
+
+  }
+}
+@media screen and (max-width: 600px) {
+  .contact__info{
+    width: 100%;
+  }
+}
