@@ -1,9 +1,8 @@
 .link__menu {
   position: fixed;
-  bottom: 50px;
+  bottom: 10px;
   z-index:1;
-  transform: rotate(-90deg);
-
+  left: 10px;
 }
 
 .li__menu {
@@ -13,10 +12,20 @@
 .link {
   color: #1c1c1c;
 }
+.add__menu {
+ width: 600px;
+ margin-left: auto;
+ margin-right: auto;
+}
 
 ul {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  flex-direction: column;
+  padding: 12px;
+}
+li{
+  transform: rotate(-90deg);
   padding: 12px;
 }

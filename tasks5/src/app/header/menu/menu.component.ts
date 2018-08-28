@@ -13,25 +13,26 @@ export class MenuComponent implements OnInit {
   arrMenu: Menu[]=[];
 
   add(){
-    
+
     this.menu = new Menu();
     this.menu.link=this.inputLink;
     this.menu.name=this.inputName;
     this.arrMenu.push(this.menu);
-
+    localStorage.setItem( 'menu', JSON.stringify(this.arrMenu));
   }
 
   constructor() {
     this.menu.link='https://vk.com/id245597432';
     this.menu.name='vk';
     this.arrMenu.push(this.menu);
-
-
-
   }
 
-  ngOnInit() {
 
+  ngOnInit() {
+    if ( localStorage.getItem('menu') != null )
+    {
+      this.arrMenu = JSON.parse(localStorage.getItem('menu'));
+    }
   }
 
 }
