@@ -1,38 +1,31 @@
-import { Component, OnInit } from '@angular/core';
-import {Menu} from './menu';
+import {Component, OnInit} from '@angular/core';
+import {Menu} from '../../model/menu';
+import {transition, trigger, useAnimation} from '@angular/animations';
+import {bounce} from 'ng-animate';
 
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
-  styleUrls: ['./menu.component.css']
+  styleUrls: ['./menu.component.css'],
+  animations:[
+    trigger('bounce', [transition('* => *', useAnimation(bounce))])
+  ]
 })
 export class MenuComponent implements OnInit {
   menu = new Menu();
   inputName: string;
   inputLink: string;
-  arrMenu: Menu[]=[];
+  arrMenu: Menu[] = [];
 
-  add(){
-
-    this.menu = new Menu();
-    this.menu.link=this.inputLink;
-    this.menu.name=this.inputName;
-    this.arrMenu.push(this.menu);
-    localStorage.setItem( 'menu', JSON.stringify(this.arrMenu));
-  }
 
   constructor() {
-    this.menu.link='https://vk.com/id245597432';
-    this.menu.name='vk';
+    this.menu.link = 'https://vk.com/id245597432';
+    this.menu.name = 'vk';
     this.arrMenu.push(this.menu);
   }
 
 
   ngOnInit() {
-    if ( localStorage.getItem('menu') != null )
-    {
-      this.arrMenu = JSON.parse(localStorage.getItem('menu'));
-    }
   }
 
 }

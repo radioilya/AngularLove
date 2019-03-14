@@ -1,12 +1,13 @@
 footer {
   clear: both;
-  position: relative;
+ 
   color: #1c1c1c;
   padding-bottom: 32px;
 }
 .footer__info {
   display: block;
   margin-bottom: 25px;
+
   font-family: "Marck Script";
   font-size: 30px;
   text-decoration: none;
@@ -15,11 +16,29 @@ footer {
 .contact__info {
   width: calc(82% - 120px);
   display: flex;
-  justify-content: flex-end;
+  justify-content: space-between;
   margin: 0 auto;
+  min-height: 220px;
   border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+}
+.feedback{
+  animation: 1s moveRight ;
+  animation-fill-mode:forwards;
 }
 .slogan {
   margin-left: 42px;
   width: 250px;
+}
+.foot_block{
+   animation: 1s moveRight ;
+  animation-fill-mode:forwards;
+}
+@keyframes moveRight {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 10%;
+  }
 }

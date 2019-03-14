@@ -1,12 +1,7 @@
-body{
-  max-width:1920px;
-  min-width:320px;
-  margin:0 auto;
 
-}
 .sectionHeader {
   min-height: 100%;
-  height: auto!important;
+  height: auto !important;
   height: 100%;
 }
 
@@ -31,12 +26,44 @@ body{
   display: block;
   font-size: 30px;
   text-decoration: none;
+  position: fixed;
   color: #1c1c1c;
+  top:20px;
 }
 
 .header__info {
+  position: absolute;
   font-family: "Marck Script";
   font-size: 30px;
   text-decoration: none;
+  top:20px;
   color: #1c1c1c;
+}
+
+.header__logo {
+  animation: 1s moveLeft;
+  animation-fill-mode:forwards;
+}
+
+@keyframes moveLeft {
+  from {
+    left: 0%;
+  }
+  to {
+    left: 10%;
+  }
+}
+
+.header__info {
+  animation: 1s moveRight ;
+  animation-fill-mode:forwards;
+}
+
+@keyframes moveRight {
+  from {
+    right: 0%;
+  }
+  to {
+    right: 10%;
+  }
 }

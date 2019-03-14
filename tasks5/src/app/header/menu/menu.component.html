@@ -1,4 +1,4 @@
-<div class="link__menu">
+<div class="link__menu" @bounce >
   <div class="link__fix">
     <nav class="nav__link__menu">
       <ul>
@@ -7,11 +7,4 @@
     </nav>
   </div>
 </div>
-<div class="add__menu">
-  <p>Добавление левого меню:</p>
-Имя
-<input [(ngModel)]="inputName">
-Ссылка
-<input [(ngModel)]="inputLink">
-<button (click)="add()">Добавить</button>
-</div>
+

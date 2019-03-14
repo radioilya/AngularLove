@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import {GlobalContent} from "../global-content";
+import {Component, OnInit} from '@angular/core';
+import {GlobalContent} from '../global-content';
 
 @Component({
   selector: 'app-footer',
@@ -7,7 +7,8 @@ import {GlobalContent} from "../global-content";
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
-  footer:GlobalContent;
+  footer: GlobalContent;
+
   constructor() {
     this.footer = new GlobalContent(
       89069150313,

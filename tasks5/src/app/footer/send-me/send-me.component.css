@@ -1,0 +1,12 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    width: 300px;
+}
+
+.btnSend{
+    margin-top: 20px;
+    margin-bottom: 30px;
+}

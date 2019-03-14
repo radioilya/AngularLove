@@ -1,0 +1,32 @@
+
+<form (submit)="SendMail()" class="form">
+    <div class="form-container">  
+    <mat-form-field> 
+  <input matInput [formControl]="clientFormControl"  placeholder="Имя">
+  <mat-error *ngIf=" clientFormControl.hasError('required')">
+      Имя нужно <strong>заполнить</strong>
+    </mat-error>
+ </mat-form-field>
+    <mat-form-field>
+  <input type="text" [errorStateMatcher]="matcher" matInput [formControl]="emailFormControl" placeholder="Почта"/>
+  <mat-error *ngIf=" emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+      Не коректный адрес электронной почты
+    </mat-error>
+    <mat-error *ngIf=" emailFormControl.hasError('required')">
+      Email нужно <strong>заполнить</strong>
+    </mat-error>
+    </mat-form-field>
+    <mat-form-field>
+
+<textarea matInput [formControl]="massageFormControl" placeholder="Сообщение"></textarea>
+<mat-error *ngIf=" massageFormControl.hasError('required')">
+    Сообщение  <strong>не может</strong> быть пустым
+  </mat-error>
+  <mat-error *ngIf=" massageFormControl.hasError('minlength')">
+      Я хочу что бы вы написали мне ещё немного символов!
+  </mat-error>
+    </mat-form-field>
+    <button mat-stroked-button class="btnSend" type="submit">Отправить</button>
+  </div>
+</form>
+

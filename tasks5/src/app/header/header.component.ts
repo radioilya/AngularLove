@@ -1,12 +1,14 @@
-import { Component, OnInit } from '@angular/core';
-import { GlobalContent } from './../global-content';
+import {Component, OnInit} from '@angular/core';
+import {GlobalContent} from './../global-content';
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.css']
 })
 export class HeaderComponent implements OnInit {
-  header:GlobalContent;
+  header: GlobalContent;
+
   constructor() {
     this.header = new GlobalContent(
       89069150313,
