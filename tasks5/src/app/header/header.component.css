@@ -30,7 +30,10 @@
   color: #1c1c1c;
   top:20px;
 }
-
+.burger__menu{
+  position: relative;
+  top: -40px; /*I know, it's not very good. */
+}
 .header__info {
   position: absolute;
   font-family: "Marck Script";

@@ -47,6 +47,10 @@ import {
   MatTreeModule,
 } from '@angular/material';
 import { HttpClientModule } from '@angular/common/http';
+import { BorgerMenuComponent } from './header/burgerMenu/borger-menu.component';
+import { AppRoutingModule } from './/app-routing.module';
+import { AboutComponent } from './about/about.component';
+import { Show404Component } from './show404/show404.component';
 
 @NgModule({
   declarations: [
@@ -57,11 +61,15 @@ import { HttpClientModule } from '@angular/common/http';
     MenuComponent,
     SkillComponent,
     SendMeComponent,
+    BorgerMenuComponent,
+    AboutComponent,
+    Show404Component,
          ],
   imports: [
     BrowserModule,
     FormsModule,
     ReactiveFormsModule,
+    AppRoutingModule,
     HttpClientModule,
     [ MatAutocompleteModule,
       MatBadgeModule,
@@ -99,6 +107,7 @@ import { HttpClientModule } from '@angular/common/http';
       MatTooltipModule,
       MatTreeModule],
     BrowserAnimationsModule,
+    AppRoutingModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
