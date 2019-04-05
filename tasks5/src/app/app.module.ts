@@ -49,8 +49,9 @@ import {
 import { HttpClientModule } from '@angular/common/http';
 import { BorgerMenuComponent } from './header/burgerMenu/borger-menu.component';
 import { AppRoutingModule } from './/app-routing.module';
-import { AboutComponent } from './about/about.component';
 import { Show404Component } from './show404/show404.component';
+import { AboutComponent } from './about/about.component';
+import { CaruselComponent } from './main/carusel/carusel.component';
 
 @NgModule({
   declarations: [
@@ -62,8 +63,9 @@ import { Show404Component } from './show404/show404.component';
     SkillComponent,
     SendMeComponent,
     BorgerMenuComponent,
-    AboutComponent,
     Show404Component,
+    AboutComponent,
+    CaruselComponent,
          ],
   imports: [
     BrowserModule,

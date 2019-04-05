@@ -1,7 +1,9 @@
 import {Component, OnInit} from '@angular/core';
 import {TextMain} from '../model/main';
 import {transition, trigger, useAnimation} from '@angular/animations';
-import {bounce, bounceInLeft, bounceInRight, rollIn} from 'ng-animate';
+import { bounceInLeft, bounceInRight} from 'ng-animate';
+import { BackendMainService } from '../backend-main.service';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-main',
@@ -15,24 +17,11 @@ import {bounce, bounceInLeft, bounceInRight, rollIn} from 'ng-animate';
 
 
 export class MainComponent implements OnInit {
-  textMain: TextMain;
-
-  constructor() {
-    this.textMain = new TextMain(
-      10,
-      'Яковлев Илья',
-      ' Меня зовут Илья, мне очень трудно дался текст, но я старался.\n' +
-      'У меня есть жена, и сын (он на фотографии).\n' +
-      'Обучался в ИИФиРЭ по специальности "радиотехника" бросил на 5 курсе.\n' +
-      'Сейчас работаю Backend разработчиком в компании по разработке сайтов, из последних достижений:' +
-      '\n' +
-      'Обновил все сайты компании до актуальной версии PHP.\n' +
-      'Провел рефакторинг имеющейся cистемы управления сайтом и ввел ORM.',
-      'assets/images/sun.jpg',
-      'Сын'
-    );
+  textMain: TextMain[];
+  getMainSubscription: Subscription;
+  constructor(private serviceMain: BackendMainService) {
   }
-
   ngOnInit() {
+    this.getMainSubscription=this.serviceMain.getMain().subscribe((value: TextMain[])=> this.textMain=value);
   }
 }
