@@ -1,0 +1,16 @@
+<mat-sidenav-container (backdropClick)="close('backdrop')" >
+  <mat-sidenav #sidenav (keydown.escape)="close('escape')" disableClose>
+   <button  mat-button class="buttonClose" (click)="close('toggle button')">Закрыть</button>
+      <nav class="menu__sidenav">
+          <a routerLink="/crisis-center" >Crisis Center</a>
+          <a routerLink="/about">Обо мне</a>
+        </nav>
+   </mat-sidenav>
+
+  <mat-sidenav-content>
+    <button mat-icon-button (click)="sidenav.open()" >
+        <mat-icon aria-label="menu">menu</mat-icon>
+      </button>
+  </mat-sidenav-content>
+</mat-sidenav-container>
+

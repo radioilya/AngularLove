@@ -1,0 +1,18 @@
+<main class="index">
+    <div class="skin">
+      <div class="content" *ngFor="let valueAbout of textAbout">
+          
+          <div  class="text__block">
+            <h1>{{valueAbout.name}}</h1>
+            {{valueAbout.text}}
+          </div>
+          <div   class="image__block">
+            <img [src]="valueAbout.img" width="100%" height="100%" src="" [alt]="valueAbout.alt">
+          </div>
+      
+    
+  
+      </div>
+      <app-skill></app-skill>
+    </div>
+</main>

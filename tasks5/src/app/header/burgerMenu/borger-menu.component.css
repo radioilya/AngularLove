@@ -1,0 +1,25 @@
+mat-sidenav {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    opacity: 0.9;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+  }
+  .menu__sidenav{
+      margin-top:50px;
+  }
+.buttonClose{
+    position: fixed;
+    width: 20;
+    height: 20;
+    right: 20px;
+}
+  mat-sidenav-content{
+    position: fixed;
+    width: 20;
+    height: 20;
+    right: 20px;
+  }
